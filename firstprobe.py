@@ -59,42 +59,6 @@ for index, i in enumerate(movie_ids):
         maps.update({keys:m[keys]})
         dicts = [{}]
 
-    # if maps.has_key('language codes'):
-    #     if maps['language codes'][0].encode() != "en":
-    #         continue
-    # elif maps.has_key('language codes') == False:
-    #     continue
-    # if maps.has_key("title"):
-    #     dicts[0].update({"title":maps['title'].encode()})
-    # if maps.has_key("director"):
-    #     #            dicts[0].update({"director":maps['director']})
-    #     if len(maps['director']) == 1:
-    #         try:
-    #             dicts[0].update({'director': maps['director'][0]['name'].encode()})
-    #         except:
-    #             continue
-    #     if len(maps['director']) > 1:
-    #         for index, name in enumerate(maps['director']):
-    #             try:
-    #                 dicts[0].update({'director'+str(index): name['name'].encode()})
-    #             except:
-    #                 continue
-                    
-    # if maps.has_key("rating"):
-    #     dicts[0].update({"rating":maps['rating']})
-    # if maps.has_key("genres"):
-    #     if len(maps['genres']) == 1:
-    #         dicts[0].update({"genre":maps['genres'][0].encode()})
-    #     if len(maps['genres']) > 1:
-    #         for index, genre in enumerate(maps['genres']):
-    #             dicts[0].update({'genres'+str(index): maps['genres'][index].encode()})
-    # if maps.has_key("runtimes"):
-    #     dicts[0].update({"runtimes":maps['runtimes'][0].encode()})
-    # if maps.has_key("year"):
-    #     dicts[0].update({"year":maps['year']})
-    # if maps.has_key("kind"):
-    #     dicts[0].update({"kind":maps['kind'].encode()})
-
     if maps != {} : ## To ensure that maps are filled, otherwise dicts is not defined! 
         makerows(maps, dicts)
 #        print dicts
